@@ -1,0 +1,159 @@
+admin (시크릿창) 시작
+
+MFA: Multi-Factor Authentication  = 다중 인증
+
+
+- MFA추가
+<IAM 대시보드화면>
+MFA 추가 누르기
+휴대폰에서 구글OTP 설치
+QR코드스캔후 숫자 2번 받아서 쓰기
+MFA 추가 완료
+
+- MFA삭제
+<IAM 대시보드화면> 빠른링크 오른쪽부분에잇음
+내 보안 자격 증명 누르고 들어가기
+멀티 팩터 인증(MFA) 밑의 MFA 디바이스 관리 누르고 제거
+핸드폰에서도 구글OTP로 받은 계정 삭제
+없다면 다시 MFA추가하기
+
+
+---------------------------------------------------------------------------
+1. billing
+2. IAM (사용자관리)   / 추후에는 역할
+3. EC2 <날마다써야하는것>
+   ECC
+
+
+ECC란
+Elastic Compute Cloud ( Amazon EC2 )는 
+Amazon Web Services(AWS) 클라우드에서 확장 가능 컴퓨팅 용량을 제공
+
+
+인스턴스 : 클라우드의 가상 서버  (VIRTUAL SERVER IN CLOUD )
+보안그룹 : 인스턴스에 대한 (트래픽을 제어하는) 방화벽 규칙 세트
+방화벽 : 특정 트래픽(port) 허용( allow ) / 차단(  )
+
+
+AWS 50%	<아마존웹서비스>
+GCP 20%		<좋은기술이많음>
+AZURE 30% 	<마이크로소프트>
+NAVER CLOUD
+대쉬보드(dashboard) : 현황판 , 계기판
+리전( region ) : 전세계의 영역
+ex) 서울리전에서 ec2 인스턴스 실행중 ..
+
+22.04.LTS ( Long-Term Support ) 오랜기간동안 지원한다.
+20.04 LTS
+18.04 LTS
+16.04 LTS
+
+Debian - Ubuntu - Raspberry PI (Raspian) - Kali Linux
+- 명령어 체계
+ex) # sudo apt -y update
+'UBUNTU' 뜻 : I am because you are
+	      내가 있는 (존재)하는 것은, 당신이 있기 (존재하기) 때문입니다.
+
+RedHat - Fedora - CentOS
+ex) # sudo yum -y update
+     # sudo dnf - y update
+
+
+
+
+=================================================
+인스턴스(클라우드 가상서버)시작하기
+ec2 화면창에서
+왼쪽 인스턴스창 누르기
+오른쪽 위쪽의 인스턴스시작누르기
+
+
+===============================
+인스턴스에 연결하는방법4가지
+
+1.인스턴스들어가서 연결
+
+$sudo apt -y update
+$sudo apt -y upgrade
+$sudo apt -y autoremove <purge하고 나서 업데이트하는데 뭐 뜰경우만>
+항상 시스템을 반짝반짝하게 관리하는 좋은습관.
+
+-----------------------------------------------------------------------------
+spring
+
+django
+
+nginx
+
+
+3 . $sudo apt -y install nginx (패키지 설치)
+$sudo apt -y remove nginx (패키지 삭제1)
+$sudo apt -y purge nginx (패키지 삭제 2,  더강력함)
+
+$sudo systemctl status nginx
+$sudo systemctl stop nginx
+	         start nginx
+
+
+
+
+
+
+$curl http://localhost
+ == curl localhost
+ == curl 127.0.0.1
+ == curl 
+
+$cd /var/www/html <-- 기본 웹페이지 
+$ cd /var/www/html $vi index.nginx-debian.html
+
+
+<h1>welcome to my first web page! </h1>
+
+
+
+postman에서 ip 쳐서 가면됌
+
+
+
+순서
+$sudo apt -y install nginx
+$sudo apt systemctl start nginx
+$sudo apt systemctl status nginx
+ll
+cd /var/www/html 이동
+ec2 설치 홈페이지가기
+인스턴스 종류 누르기
+퍼블릭 IPv4 주소 복사
+다른시크릿창으로 띄우기
+퍼블릭 IPv4 주소 붙여넣기해서 들어가기
+들어가지면
+cd /var/www/html
+ll
+sudo vi my.html
+<h1>hello world</h1>
+
+
+$sudo apt -y purge nginx 패키지삭제
+$sudo apt -y update
+$sudo apt -y upgrade
+$sudo apt -y autoremove 뜨면 다시
+
+$sudo apt -y update
+$sudo apt -y upgrade
+
+exit
+종류후
+항상 인스턴스 중지 
+<인스턴스 종료는 삭제임>
+
+
+
+
+
+
+------------------------------------------------------------------------------
+
+
+
+
